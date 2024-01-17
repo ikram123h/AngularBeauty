@@ -1,0 +1,57 @@
+<div class="container">
+  <div>
+    <h2>Add Product</h2>
+  </div>
+  <form>
+    <div hidden class="col-sm-4 col-md-4 col-lg-4">
+      <label>Parfum Id</label>
+      <input
+        type="number"
+        [(ngModel)]="newParfum.idParfum"
+        name="idParfum"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Parfum Name</label>
+      <input
+        type="text"
+        [(ngModel)]="newParfum.nameParfum"
+        name="nameParfum"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Parfum Price</label>
+      <input
+        type="number"
+        [(ngModel)]="newParfum.priceParfum"
+        name="priceParfum"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Parfum Stock</label>
+      <input
+        type="number"
+        [(ngModel)]="newParfum.stockParfum"
+        name="stockParfum"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Date Creation Parfum</label>
+      <input
+        type="date"
+        [(ngModel)]="newParfum.dateCreate"
+        name="dateCreate"
+        class="form-control"
+      />
+    </div>
+    <div class="mt-2">
+      <button type="submit" (click)="addParfum()" class="btn btn-success">
+        ADD
+      </button>
+    </div>
+  </form>
+</div>

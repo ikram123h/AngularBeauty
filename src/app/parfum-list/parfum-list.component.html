@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <h5>Perfums List</h5>
+      <table class="table table-danger">
+        <thead>
+        <tr>
+          <th>NAME</th><th>PRICE</th><th>STOCK</th><th>DATE</th><th></th><th></th>
+        </tr>
+        </thead>
+        <tbody *ngFor = "let parfum of parfums">
+        <tr>
+
+          <td> {{ parfum.nameParfum }} </td>
+          <td> {{ parfum.priceParfum }} </td>
+          <td> {{ parfum.stockParfum }} </td>
+          <td> {{ parfum.dateCreate | date : "dd/mm/yyyy" }} </td>
+          <td><button class="btn btn-danger" (click)="delete(parfum.idParfum)">Delete</button> </td>
+          <td><a class="btn btn-dark" [routerLink]="['/Edit-Parfum', parfum.idParfum]" >Edit</a> </td>
+
+        </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+  <div>
+    <h2>Edit Parfum</h2>
+  </div>
+  <form >
+    <div hidden class="col-sm-4 col-md-4 col-lg-4" >
+      <label >Parfum Id</label>
+      <input type="number"
+             [(ngModel)] = "currentParfum.idParfum"
+             name="idParfum"
+             class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+      <label >Parfum Name</label>
+      <input type="text"
+             [(ngModel)] = "currentParfum.nameParfum"
+             name="nameParfum"
+             class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+      <label >Parfum Price</label>
+      <input type="number"
+             [(ngModel)] = "currentParfum.priceParfum"
+             name="priceParfum"
+             class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+      <label >Parfum Stock</label>
+      <input type="text"
+             [(ngModel)] = "currentParfum.stockParfum"
+             name="stockParfum"
+             class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >Date Creation Parfum</label>
+      <input type="date"
+             [ngModel] = "currentParfum.dateCreate | date:'yyyy-mm-dd'"
+             (ngModelChange) = "currentParfum.dateCreate=$event"
+             name="dateParfum"
+             class="form-control">
+    </div>
+    <div class="mt-2">
+      <button type="submit"   (click)="updateParfum()"  class="btn btn-success">UPDATE</button>
+    </div>
+  </form>
+</div>
